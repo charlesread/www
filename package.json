@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite build && serve -l tcp://0.0.0.0:8080 ./dist"
+    "start": "npx vite build && npx serve -l tcp://0.0.0.0:8080 ./dist"
   },
   "dependencies": {
     "serve": "^14.2.0",
