@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp -r dist py/src/static",
     "preview": "vite preview",
     "start": "node server/index.js"
   },
@@ -20,4 +20,5 @@
     "vite": "^4.3.0"
   }
 }
+
 

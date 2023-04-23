@@ -1,6 +1,6 @@
 <template>
   <div>
-      <code>alert('welcome');</code>
+      <code>alert('charles@charlesread.com');</code>
   </div>
 </template>
 
