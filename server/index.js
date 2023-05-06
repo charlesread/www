@@ -7,11 +7,18 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 import fastifyFactory from 'fastify'
 import fastifyStatic from '@fastify/static'
 
-const fastify = fastifyFactory()
+const fastify = fastifyFactory({
+    trustProxy: true
+})
 
 fastify.register(fastifyStatic, {
     root: path.resolve(__dirname, '..', 'dist'),
     prefix: '/'
+})
+
+fastify.addHook('onRequest', async function(request,reply){
+    console.log(`${request.hostname} - ${request.method} - ${request.url}, headers;`)
+    console.log(request.headers)
 })
 
 const start = async () => {
